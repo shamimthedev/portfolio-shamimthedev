@@ -1,0 +1,11 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', serif;
+}
+@theme{
+  --font-monkey: 'Happy Monkey';
+  --color-blueish: #2271EB;
+}
