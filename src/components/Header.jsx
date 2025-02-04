@@ -43,12 +43,12 @@ const Header = () => {
                                     to={`#${section}`}
                                     className={`relative transition-all duration-300 
                                         after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[2px] 
-                                        after:bg-amber-800 after:content-[''] after:scale-x-0 
+                                        after:bg-blueish after:content-[''] after:scale-x-0 
                                         after:origin-left hover:after:scale-x-100 
                                         after:transition-transform after:duration-300
                                         ${
                                             location.hash === `#${section}`
-                                                ? "text-[#2271EB] after:scale-x-100"
+                                                ? "text-blueish after:scale-x-100"
                                                 : "text-black"
                                         }`}
                                 >
