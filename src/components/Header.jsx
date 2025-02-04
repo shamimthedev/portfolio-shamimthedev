@@ -2,7 +2,6 @@ import { HashLink } from "react-router-hash-link";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import Logo from "/logo.png";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +17,6 @@ const Header = () => {
                 setIsScrolled(false);
             }
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -31,7 +29,7 @@ const Header = () => {
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/">
-                    <img src={Logo} alt="Logo" className="w-[52px]" />
+                <h3 className="w-14 h-14 rounded-[6px] font-monkey bg-blueish text-white text-[48px] flex items-center justify-center ">S</h3>
                 </Link>
 
                 {/* Desktop Menu */}
