@@ -1,41 +1,15 @@
+import { useState } from "react";
 import Project from "./Project";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import NextArrow from "./NextArrow";
-import PrevArrow from "./PrevArrow";
 
 const Projects = () => {
-  var settings = {
-    dots: false, // Removed dots
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Show 3 slides by default
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024, // Tablets & small screens
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768, // Mobile devices
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const projectData = [
     {
       id: 1,
       title: "House Decor Furniture Ecommerce",
       desc: "A furniture ecommerce made with React and Tailwind CSS.",
-      category: "JavaScript, React, Tailwind",
+      categories: ["React", "Tailwind"],
       link: "https://github.com/shamimthedev/HouseDecor--react-furniture-project",
       liveLink: "https://house-decor-react-furniture-project.vercel.app/",
     },
@@ -43,7 +17,7 @@ const Projects = () => {
       id: 2,
       title: "Portfolio Website",
       desc: "A personal portfolio built using Next.js and Tailwind CSS.",
-      category: "Next.js, Tailwind, React",
+      categories: ["Next.js", "Tailwind"],
       link: "https://github.com/shamimthedev/portfolio-project",
       liveLink: "https://portfolio-project.vercel.app/",
     },
@@ -51,7 +25,7 @@ const Projects = () => {
       id: 3,
       title: "E-learning Platform",
       desc: "An online learning platform with authentication and payment integration.",
-      category: "MERN Stack, Redux, Tailwind",
+      categories: ["MERN Stack", "Redux"],
       link: "https://github.com/shamimthedev/e-learning",
       liveLink: "https://e-learning-app.vercel.app/",
     },
@@ -59,60 +33,67 @@ const Projects = () => {
       id: 4,
       title: "Food Ordering App",
       desc: "A food ordering system built with Firebase and Tailwind.",
-      category: "React, Firebase, Tailwind",
+      categories: ["React", "Firebase"],
       link: "https://github.com/shamimthedev/food-ordering-app",
       liveLink: "https://food-ordering-app.vercel.app/",
     },
   ];
 
+  const handleCategoryFilter = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredProjects = selectedCategory === "All" 
+    ? projectData 
+    : projectData.filter((project) =>
+        project.categories.includes(selectedCategory)
+      );
+
   return (
     <section
       id="projects"
-      className="pt-[110px] pb-[100px] bg-cover bg-center"
-      style={{ backgroundImage: "url('/projects-background.png')" }}
-    >
+      className="pt-[110px] pb-[100px]">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
         <div className="text-center lg:text-left">
-          <h2 className="font-semibold text-[28px] sm:text-[30px]">Projects</h2>
+          <h2 className="font-semibold text-[28px] sm:text-[30px]">All Projects</h2>
           <p className="text-[15px] text-[#666] mt-2">
             Here are the projects I developed, prototyped, or participated in
           </p>
         </div>
 
-        {/* Arrows Touching Container & Slider Centered */}
-        <div className="relative mt-16 flex items-center">
-          {/* Left Arrow */}
-          <div className="absolute left-0 z-10 top-1/2 transform -translate-y-1/2">
-            <PrevArrow />
-          </div>
+        {/* Category buttons */}
+        <div className="mt-8 mb-4 flex justify-center gap-[15px] flex-wrap">
+          {["All", "React", "Tailwind", "Next.js", "MERN Stack"].map((category) => (
+            <button
+              key={category}
+              className={`mb-4 font-semibold text-xs px-[12px] py-[6px] rounded-[4px] cursor-pointer ${
+                selectedCategory === category
+                  ? "bg-blueish text-white"
+                  : "bg-gray-200 text-black"
+              }`}
+              onClick={() => handleCategoryFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-          {/* Slider Container with padding */}
-          <div className="w-full mx-auto px-8">
-            <Slider {...settings} className="w-full">
-              {projectData.map((project) => (
-                <div key={project.id} className="px-3">
-                  <div className="h-full flex">
-                    <Project
-                      title={project.title}
-                      desc={project.desc}
-                      category={project.category}
-                      link={project.link}
-                      liveLink={project.liveLink}
-                    />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          {/* Right Arrow */}
-          <div className="absolute right-0 z-10 top-1/2 transform -translate-y-1/2">
-            <NextArrow />
-          </div>
+        {/* Projects container with horizontal display */}
+        <div className="flex flex-wrap gap-[20px] justify-center">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="w-[320px]">
+              <Project
+                title={project.title}
+                desc={project.desc}
+                categories={project.categories}
+                link={project.link}
+                liveLink={project.liveLink}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
-
   );
 };
 

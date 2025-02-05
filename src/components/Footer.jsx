@@ -21,7 +21,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="w-full py-[120px] bg-white relative">
+    <section id="contact" className="w-full py-[120px] bg-[#F5F5F5] relative">
       <div className="flex flex-col items-center justify-center max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         
         {/* Contact Information */}
@@ -39,7 +39,7 @@ const Footer = () => {
                 alt="Mail"
                 className="w-[27px] h-[27px] cursor-pointer"
               />
-              <p className="text-[15px] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+              <p className="text-[15px] text-[#333] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                 shamimthedev@gmail.com
               </p>
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
                 alt="GitHub"
                 className="w-[27px] h-[27px] cursor-pointer"
               />
-              <p className="text-[15px] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+              <p className="text-[15px] text-[#333] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                 github.com/shamimthedev
               </p>
             </a>
@@ -77,7 +77,7 @@ const Footer = () => {
                 alt="LinkedIn"
                 className="w-[27px] h-[27px] cursor-pointer"
               />
-              <p className="text-[15px] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+              <p className="text-[15px] text-[#333] relative after:block after:h-[2px] after:w-full after:bg-[#2271EB] after:scale-x-0 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                 www.linkedin.com/in/shamimthedev
               </p>
             </a>
