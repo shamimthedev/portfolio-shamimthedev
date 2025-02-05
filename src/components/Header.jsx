@@ -24,12 +24,14 @@ const Header = () => {
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
             ${isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-4"}`}>
-            
+
             {/* Container with max-width 1320px */}
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/">
-                <h3 className="w-14 h-14 rounded-[6px] font-monkey bg-blueish text-white text-[48px] flex items-center justify-center ">S</h3>
+                    <h3 className="w-14 h-14 rounded-[6px] font-inter bg-blueish text-white text-[36px] flex items-center justify-center">
+                        S
+                    </h3>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -44,10 +46,9 @@ const Header = () => {
                                         after:bg-blueish after:content-[''] after:scale-x-0 
                                         after:origin-left hover:after:scale-x-100 
                                         after:transition-transform after:duration-300
-                                        ${
-                                            location.hash === `#${section}`
-                                                ? "text-blueish after:scale-x-100"
-                                                : "text-black"
+                                        ${location.hash === `#${section}`
+                                            ? "text-blueish after:scale-x-100"
+                                            : "text-black"
                                         }`}
                                 >
                                     {section.replace("-", " ")}
@@ -55,7 +56,7 @@ const Header = () => {
                             </li>
                         ))}
                     </ul>
-                    <button className="px-4 py-2 text-white font-medium text-[15px] bg-[#2290E2] rounded-[6px]">
+                    <button className="px-4 py-2 text-white font-medium text-[15px] bg-[#2290E2] rounded-[6px] cursor-pointer transition-all duration-300 hover:bg-[#1A7AC3] hover:scale-105">
                         Download CV
                     </button>
                 </nav>
@@ -73,15 +74,14 @@ const Header = () => {
                         <HashLink
                             key={section}
                             to={`#${section}`}
-                            className={`text-lg font-medium transition-all duration-300 ${
-                                location.hash === `#${section}` ? "text-[#2271EB]" : "text-black"
-                            }`}
+                            className={`text-lg font-medium transition-all duration-300 ${location.hash === `#${section}` ? "text-[#2271EB]" : "text-black"
+                                }`}
                             onClick={() => setMenuOpen(false)}
                         >
                             {section.replace("-", " ")}
                         </HashLink>
                     ))}
-                    <button className="px-4 py-2 text-white font-medium text-[15px] bg-[#2290E2] rounded-[6px]">
+                    <button className="px-4 py-2 text-white font-medium text-[15px] bg-[#2290E2] rounded-[6px] cursor-pointer transition-all duration-300 hover:bg-[#1A7AC3] hover:scale-105">
                         Download CV
                     </button>
                 </nav>
