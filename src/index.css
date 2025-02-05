@@ -8,4 +8,5 @@ body{
 @theme{
   --font-monkey: 'Happy Monkey';
   --color-blueish: #2271EB;
+  --shadow-3xl: 0 4px 7px rgba(138, 138, 138, 0.25);
 }
