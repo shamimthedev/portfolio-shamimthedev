@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Project from "./Project";
+import Kosi from '/kosi-cover.png'
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -7,14 +8,16 @@ const Projects = () => {
   const projectData = [
     {
       id: 1,
-      title: "House Decor Furniture Ecommerce",
+      src: Kosi,
+      title: "Kosi - Furniture Ecommerce",
       desc: "A furniture ecommerce made with React and Tailwind CSS.",
       categories: ["React", "Tailwind"],
-      link: "https://github.com/shamimthedev/HouseDecor--react-furniture-project",
-      liveLink: "https://house-decor-react-furniture-project.vercel.app/",
+      link: "https://github.com/shamimthedev/Kosi--react-ecommerce",
+      liveLink: "https://kosi-react-ecommerce.vercel.app/",
     },
     {
       id: 2,
+      src: Kosi,
       title: "Portfolio Website",
       desc: "A personal portfolio built using Next.js and Tailwind CSS.",
       categories: ["Next.js", "Tailwind"],
@@ -23,6 +26,7 @@ const Projects = () => {
     },
     {
       id: 3,
+      src: Kosi,
       title: "E-learning Platform",
       desc: "An online learning platform with authentication and payment integration.",
       categories: ["MERN Stack", "Redux"],
@@ -31,6 +35,7 @@ const Projects = () => {
     },
     {
       id: 4,
+      src: Kosi,
       title: "Food Ordering App",
       desc: "A food ordering system built with Firebase and Tailwind.",
       categories: ["React", "Firebase"],
@@ -83,6 +88,7 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div key={project.id} className="w-[320px]">
               <Project
+                src={project.src}
                 title={project.title}
                 desc={project.desc}
                 categories={project.categories}

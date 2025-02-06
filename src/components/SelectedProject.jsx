@@ -5,38 +5,43 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
+import Kosi from '/kosi-cover.png'
 
 const SelectedProjects = () => {
 
     const selectedProject = [
         {
             id: 1,
-            title: "Furniture E-commerce",
-            desc: "React & Tailwind furniture site.",
+            src: Kosi,
+            title: "Kosi - Furniture Ecommerce",
+            desc: "A furniture ecommerce made with React and Tailwind CSS.",
             categories: ["React", "Tailwind"],
-            link: "https://github.com/shamimthedev/HouseDecor--react-furniture-project",
-            liveLink: "https://house-decor-react-furniture-project.vercel.app/",
+            link: "https://github.com/shamimthedev/Kosi--react-ecommerce",
+            liveLink: "https://kosi-react-ecommerce.vercel.app/",
         },
         {
             id: 2,
+            src: Kosi,
             title: "Portfolio Website",
-            desc: "Personal website built with Next.js.",
-            categories: ["Next.js", "React"],
+            desc: "A personal portfolio built using Next.js and Tailwind CSS.",
+            categories: ["Next.js", "Tailwind"],
             link: "https://github.com/shamimthedev/portfolio-project",
             liveLink: "https://portfolio-project.vercel.app/",
         },
         {
             id: 3,
+            src: Kosi,
             title: "E-learning Platform",
-            desc: "Learning platform with MERN stack.",
+            desc: "An online learning platform with authentication and payment integration.",
             categories: ["MERN Stack", "Redux"],
             link: "https://github.com/shamimthedev/e-learning",
             liveLink: "https://e-learning-app.vercel.app/",
         },
         {
             id: 4,
+            src: Kosi,
             title: "Food Ordering App",
-            desc: "Food delivery system with Firebase.",
+            desc: "A food ordering system built with Firebase and Tailwind.",
             categories: ["React", "Firebase"],
             link: "https://github.com/shamimthedev/food-ordering-app",
             liveLink: "https://food-ordering-app.vercel.app/",
@@ -88,6 +93,7 @@ const SelectedProjects = () => {
                             <div key={project.id} className="px-6"> {/* Increased horizontal padding */}
                                 <div className="h-full flex items-center justify-center">
                                     <Project
+                                        src={project.src}
                                         title={project.title}
                                         desc={project.desc}
                                         categories={project.categories}
