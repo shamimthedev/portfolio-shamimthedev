@@ -75,7 +75,7 @@ const SelectedProjects = () => {
         >
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
                 <div className="text-center lg:text-left">
-                    <h2 className="font-semibold text-[28px] sm:text-[30px]">Selected Projects</h2>
+                    <h2 className="font-semibold text-[#333] text-[32px] sm:text-[30px]">Selected Projects</h2>
                     <p className="text-[15px] text-[#666] mt-2">
                         These are some of my most important and featured projects.
                     </p>

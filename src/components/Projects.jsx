@@ -43,11 +43,11 @@ const Projects = () => {
     setSelectedCategory(category);
   };
 
-  const filteredProjects = selectedCategory === "All" 
-    ? projectData 
+  const filteredProjects = selectedCategory === "All"
+    ? projectData
     : projectData.filter((project) =>
-        project.categories.includes(selectedCategory)
-      );
+      project.categories.includes(selectedCategory)
+    );
 
   return (
     <section
@@ -55,7 +55,7 @@ const Projects = () => {
       className="pt-[110px] pb-[100px]">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
         <div className="text-center lg:text-left">
-          <h2 className="font-semibold text-[28px] sm:text-[30px]">All Projects</h2>
+          <h2 className="font-semibold text-[32px] text-[#333] sm:text-[30px]">All Projects</h2>
           <p className="text-[15px] text-[#666] mt-2">
             Here are the projects I developed, prototyped, or participated in
           </p>
@@ -66,15 +66,15 @@ const Projects = () => {
           {["All", "React", "Tailwind", "Next.js", "MERN Stack"].map((category) => (
             <button
               key={category}
-              className={`mb-4 font-semibold text-xs px-[12px] py-[6px] rounded-[4px] cursor-pointer ${
-                selectedCategory === category
-                  ? "bg-blueish text-white"
-                  : "bg-gray-200 text-black"
-              }`}
+              className={`mb-4 font-semibold text-xs px-[12px] py-[6px] rounded-[4px] cursor-pointer ${selectedCategory === category
+                  ? "bg-blueish text-white" // For selected category
+                  : "bg-gray-200 text-[#444] hover:text-[#1A7AC3]" // For unselected category
+                }`}
               onClick={() => handleCategoryFilter(category)}
             >
               {category}
             </button>
+
           ))}
         </div>
 

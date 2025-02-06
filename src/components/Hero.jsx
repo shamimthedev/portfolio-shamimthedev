@@ -22,8 +22,8 @@ const Hero = () => {
           
           {/* Text Content */}
           <div className="flex flex-col items-center lg:items-start">
-            <p className="text-[16px] sm:text-[18px] text-[#666666]">Hi, my name is</p>
-            <h1 className="text-[22px] sm:text-[26px] font-semibold">Md. Shamim Hossain</h1>
+            <p className="text-[16px] sm:text-[18px] text-[#666]">Hi, my name is</p>
+            <h1 className="text-[22px] sm:text-[26px] font-semibold text-[#333]">Md. Shamim Hossain</h1>
             <div className="w-[200px] sm:w-[290px] h-[1px] bg-[#E5E5E5] my-3"></div>
 
             {/* Social Icons */}

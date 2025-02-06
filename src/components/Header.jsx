@@ -46,9 +46,9 @@ const Header = () => {
                                         after:bg-blueish after:content-[''] after:scale-x-0 
                                         after:origin-left hover:after:scale-x-100 
                                         after:transition-transform after:duration-300
-                                        ${location.hash === `#${section}`
+                                        ${location.hash === `#${section}` 
                                             ? "text-blueish after:scale-x-100"
-                                            : "text-black"
+                                            : "text-[#333]" // Changed text color to match other sections
                                         }`}
                                 >
                                     {section.replace("-", " ")}
@@ -74,8 +74,7 @@ const Header = () => {
                         <HashLink
                             key={section}
                             to={`#${section}`}
-                            className={`text-lg font-medium transition-all duration-300 ${location.hash === `#${section}` ? "text-[#2271EB]" : "text-black"
-                                }`}
+                            className={`text-lg font-medium transition-all duration-300 ${location.hash === `#${section}` ? "text-[#2271EB]" : "text-[#333]"} `}
                             onClick={() => setMenuOpen(false)}
                         >
                             {section.replace("-", " ")}
@@ -91,3 +90,4 @@ const Header = () => {
 };
 
 export default Header;
+
