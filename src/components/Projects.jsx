@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Project from "./Project";
 import Kosi from '/kosi-cover.png'
+import HouseDecor from '/housedecor-cover.png'
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,12 +18,12 @@ const Projects = () => {
     },
     {
       id: 2,
-      src: Kosi,
-      title: "Portfolio Website",
-      desc: "A personal portfolio built using Next.js and Tailwind CSS.",
-      categories: ["Next.js", "Tailwind"],
-      link: "https://github.com/shamimthedev/portfolio-project",
-      liveLink: "https://portfolio-project.vercel.app/",
+      src: HouseDecor,
+      title: "Housedecor - A Furniture Store",
+      desc: "Everything you need for your living room",
+      categories: ["React", "Redux", "Tailwind"],
+      link: "https://github.com/shamimthedev/HouseDecor--react-furniture-project",
+      liveLink: "https://house-decor-react-furniture-project.vercel.app/",
     },
     {
       id: 3,
@@ -72,8 +73,8 @@ const Projects = () => {
             <button
               key={category}
               className={`mb-4 font-semibold text-xs px-[12px] py-[6px] rounded-[4px] cursor-pointer ${selectedCategory === category
-                  ? "bg-blueish text-white" // For selected category
-                  : "bg-gray-200 text-[#444] hover:text-[#1A7AC3]" // For unselected category
+                ? "bg-blueish text-white" // For selected category
+                : "bg-gray-200 text-[#444] hover:text-[#1A7AC3]" // For unselected category
                 }`}
               onClick={() => handleCategoryFilter(category)}
             >

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Project = ({ title, src, desc, categories, link, liveLink }) => {
   return (
     <div className="w-[320px] h-[440px] rounded-t-[7px] overflow-hidden shadow-3xl flex flex-col bg-white">
-      <img src={src} alt="" className="w-full h-[180px] object-fill" />
+      <img src={src} alt="" className="w-full h-[180px] object-cover" />
 
       <div className="flex flex-col flex-1 pt-7 pl-[26px] pb-[22px] pr-[22px]">
         <h3 className="mb-4 font-semibold text-[20px] text-[#333]">{title}</h3>

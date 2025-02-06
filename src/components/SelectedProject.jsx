@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
 import Kosi from '/kosi-cover.png'
+import HouseDecor from '/housedecor-cover.png'
 
 const SelectedProjects = () => {
 
@@ -15,18 +16,18 @@ const SelectedProjects = () => {
             src: Kosi,
             title: "Kosi - Furniture Ecommerce",
             desc: "A furniture ecommerce made with React and Tailwind CSS.",
-            categories: ["React", "Tailwind"],
+            categories: ["React", "Redux", "Tailwind"],
             link: "https://github.com/shamimthedev/Kosi--react-ecommerce",
             liveLink: "https://kosi-react-ecommerce.vercel.app/",
         },
         {
             id: 2,
-            src: Kosi,
-            title: "Portfolio Website",
-            desc: "A personal portfolio built using Next.js and Tailwind CSS.",
-            categories: ["Next.js", "Tailwind"],
-            link: "https://github.com/shamimthedev/portfolio-project",
-            liveLink: "https://portfolio-project.vercel.app/",
+            src: HouseDecor,
+            title: "Housedecor - A Furniture Store",
+            desc: "Everything you need for your living room",
+            categories: ["React", "Redux", "Tailwind"],
+            link: "https://github.com/shamimthedev/HouseDecor--react-furniture-project",
+            liveLink: "https://house-decor-react-furniture-project.vercel.app/",
         },
         {
             id: 3,
