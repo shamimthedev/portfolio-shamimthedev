@@ -7,6 +7,7 @@ import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
 import Kosi from '/kosi-cover.png'
 import HouseDecor from '/housedecor-cover.png'
+import ShoppingCart from '/cart-context-api-cover.png'
 
 const SelectedProjects = () => {
 
@@ -31,12 +32,12 @@ const SelectedProjects = () => {
         },
         {
             id: 3,
-            src: Kosi,
-            title: "E-learning Platform",
-            desc: "An online learning platform with authentication and payment integration.",
-            categories: ["MERN Stack", "Redux"],
-            link: "https://github.com/shamimthedev/e-learning",
-            liveLink: "https://e-learning-app.vercel.app/",
+            src: ShoppingCart,
+            title: "Shopping Cart with ContextAPI",
+            desc: "Add to Cart functionality with ContextAPI",
+            categories: ["React", "Context API", 'Tailwind'],
+            link: "https://github.com/shamimthedev/shopping-cart-with-context-api",
+            liveLink: "https://github.com/shamimthedev/shopping-cart-with-context-api",
         },
         {
             id: 4,
