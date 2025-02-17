@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row lg:order-1 items-center lg:items-start gap-6 w-full lg:w-[45%] mt-10 lg:mt-0">
           {/* Profile Picture */}
           <div className="w-[90px] sm:w-[110px] h-[90px] sm:h-[110px] rounded-full bg-[#dcdcdc] overflow-hidden">
-            <img src={ProfilePic} alt="Md. Shamim Hossain" className="w-full h-full object-cover" />
+            <img src={ProfilePic} alt="Md. Shamim Hossain" className="w-full h-full" />
           </div>
           
           {/* Text Content */}

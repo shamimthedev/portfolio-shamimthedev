@@ -37,11 +37,11 @@ const Header = () => {
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex items-center gap-12">
                     <ul className="flex gap-8 font-medium text-[15px] lowercase">
-                        {["about", "specialization", "projects", "contact"].map((section) => (
+                        {["About", "Specialization", "Projects", "Contact"].map((section) => (
                             <li key={section} className="relative">
                                 <HashLink
                                     to={`#${section}`}
-                                    className={`relative transition-all duration-300 
+                                    className={`relative capitalize transition-all duration-300 
                                         after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[2px] 
                                         after:bg-blueish after:content-[''] after:scale-x-0 
                                         after:origin-left hover:after:scale-x-100 
@@ -70,7 +70,7 @@ const Header = () => {
             {/* Mobile Menu */}
             {menuOpen && (
                 <nav className="md:hidden flex flex-col items-center gap-4 bg-white shadow-md py-4">
-                    {["about", "specialization", "projects", "contact"].map((section) => (
+                    {["About", "Specialization", "Projects", "Contact"].map((section) => (
                         <HashLink
                             key={section}
                             to={`#${section}`}
